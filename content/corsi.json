@@ -1,0 +1,17 @@
+{
+  "titolo": "I nostri corsi",
+  "intro": "Il Circolo Frescobaldi offre corsi di musica sperimentali per bambini-ragazzi e adulti, con possibilità di accesso e apprendimento musicale anche per persone diversamente abili.\nI corsi sono basati sulla ricerca e lo studio su come fare apprendere la musica dall'inizio.\n\nI nostri insegnanti, oltre ad essere concertisti, sono tutti specializzati e abilitati per l'insegnamento della musica.\n\nDa settembre a maggio il circolo organizza i corsi di canto lirico, canto moderno, pop, jazz, flauto traverso, clarinetto, violino-viola, violoncello, pianoforte, chitarra classica ed elettrica.\nI nostri allievi apprendono la musica con metodologie aggiornate e molti di loro vengono poi avviati ai corsi di specializzazione preaccademici del conservatorio.\n\nI nostri insegnanti di propedeutica attuano un'attività costante di monitoraggio degli apprendimenti e dell'evoluzione tecnico musicale dei nostri allievi.\n\nOgni anno organizziamo in teatro dei concerti di musica di insieme per gli allievi e per la nostra orchestra professionale.",
+  "elenco": [
+    { "nome": "Canto Lirico" },
+    { "nome": "Canto Moderno" },
+    { "nome": "Pianoforte" },
+    { "nome": "Chitarra Classica" },
+    { "nome": "Chitarra Elettrica" },
+    { "nome": "Fisarmonica" },
+    { "nome": "Flauto Traverso" },
+    { "nome": "Violino" },
+    { "nome": "Violoncello" },
+    { "nome": "Batteria" },
+    { "nome": "Propedeutica 6–13" }
+  ]
+}

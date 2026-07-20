@@ -1,0 +1,103 @@
+      </div>
+
+    </div>
+
+    <!-- CTA MODULO DI ISCRIZIONE -->
+    <div class="modulo-cta">
+      <div class="modulo-cta-icon">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 11v7"></path><path d="M9 15l3 3 3-3"></path></svg>
+      </div>
+      <p class="section-eyebrow" style="text-align:center;">Pronto a iscriverti?</p>
+      <h3 class="modulo-cta-title">Scarica il Modulo di Iscrizione</h3>
+      <p class="modulo-cta-text">Scarica il modulo, compilalo e firmalo, poi consegnalo in segreteria o inviacelo via email insieme alla ricevuta di pagamento della quota associativa.</p>
+
+      <div id="modulo-file-list" class="pdf-file-list modulo-cta-filelist"><div class="pdf-file-item">
+          <span class="pdf-file-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span>
+          <span class="pdf-file-name">Modulo_Iscrizione.pdf</span>
+          <a href="__PDF_MODULO__" download="Modulo_Iscrizione.pdf" class="pdf-download-btn" title="Scarica"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></a>
+          <button class="pdf-file-remove" onclick="removeModulo()" title="Rimuovi">×</button>
+        </div></div>
+      <!-- Placeholder visibile a tutti quando nessun modulo è ancora caricato -->
+      <div id="modulo-placeholder" style="display: none; margin-top: 14px; text-align: center;">
+        <p style="font-size:0.82rem; color:var(--muted); font-style:italic;">Il documento sarà disponibile a breve.</p>
+      </div>
+
+      <div id="modulo-upload-panel" class="modulo-cta-admin" style="display: none;">
+        <p class="section-eyebrow" style="margin-bottom:10px; text-align:center;">Carica modulo iscrizione <span style="font-size:0.65rem;color:var(--gold);margin-left:6px;">· Solo Admin</span></p>
+        <div class="pdf-drop-zone" id="modulo-drop-zone">
+          <input type="file" accept="application/pdf" id="modulo-input" onchange="handleModuloFile(this.files)">
+          <div class="pdf-drop-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M12 12v6"></path><path d="M9 15l3-3 3 3"></path>
+            </svg>
+          </div>
+          <div class="pdf-drop-title">Trascina qui il modulo PDF</div>
+          <div class="pdf-drop-sub">oppure clicca · solo .pdf</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATUTO -->
+<section id="statuto">
+  <div class="section-inner">
+    <div class="statuto-grid">
+      <div class="statuto-text-col">
+        <p class="section-eyebrow">DOCUMENTO FONDATIVO</p>
+        <h2 class="section-title">Statuto del Circolo</h2>
+        <div class="section-rule"></div>
+        <p class="statuto-p1" style="color:var(--mid); font-size:0.95rem; line-height:1.8; margin-bottom:20px;">Lo Statuto è il documento che regola la vita associativa del Circolo Amici della Musica G. Frescobaldi, definendo finalità, organi, diritti e doveri dei soci.</p>
+        <p class="statuto-p2" style="color:var(--mid); font-size:0.95rem; line-height:1.8; margin-bottom:28px;">Puoi scaricarlo direttamente da questa pagina. Per informazioni contattaci via email.</p>
+
+        <!-- PDF pubblico (visibile a tutti, mostrato quando admin carica) -->
+        <div id="statuto-public" style="display: block;">
+          <a id="statuto-public-link" href="__PDF_STATUTO__" download="Statuto 2020_Circolo Amici della Musica G.Frescobaldi APS.pdf" class="btn-outline" style="display:inline-flex;align-items:center;gap:10px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><polyline points="9 15 12 18 15 15"></polyline></svg>
+            <span id="statuto-public-label">Scarica lo Statuto</span>
+          </a>
+        </div>
+
+        <!-- Placeholder visibile a tutti quando nessun PDF è ancora caricato -->
+        <div id="statuto-placeholder" style="display: none; margin-top: 4px;">
+          <p style="font-size:0.82rem; color:var(--muted); font-style:italic;">Il documento sarà disponibile a breve.</p>
+        </div>
+      </div>
+
+      <!-- Drop zone — solo admin -->
+      <div id="statuto-upload-panel" style="display: none;">
+        <p class="section-eyebrow" style="margin-bottom:14px;">Carica Statuto <span style="font-size:0.65rem;color:var(--gold);margin-left:6px;">· Solo Admin</span></p>
+        <div class="pdf-drop-zone" id="statuto-drop-zone">
+          <input type="file" accept="application/pdf" id="statuto-input" onchange="handleStatutoFile(this.files)">
+          <div class="pdf-drop-icon">
+            <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <path d="M12 12v6"></path><path d="M9 15l3-3 3 3"></path>
+            </svg>
+          </div>
+          <div class="pdf-drop-title">Trascina qui il PDF dello Statuto</div>
+          <div class="pdf-drop-sub">oppure clicca per selezionare · solo .pdf</div>
+        </div>
+        <div id="statuto-file-info" style="display: flex; margin-top: 14px;" class="pdf-file-item">
+          <span class="pdf-file-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></span>
+          <span class="pdf-file-name" id="statuto-file-name">Statuto 2020_Circolo Amici della Musica G.Frescobaldi APS.pdf</span>
+          <button class="pdf-file-remove" onclick="removeStatuto()" title="Rimuovi">×</button>
+        </div>
+        <p style="font-size:0.72rem; color:var(--muted); margin-top:12px; font-style:italic;">Il file è disponibile fino alla chiusura della pagina. Per un link permanente usa il tab Altro nel pannello admin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+  <div class="section-inner">
+    <div class="contatti-grid">
+      <div class="contatti-info">
+        <p class="section-eyebrow">RECAPITI</p>
+        <h2 class="section-title">Contatti</h2>
+        <div class="section-rule"></div>

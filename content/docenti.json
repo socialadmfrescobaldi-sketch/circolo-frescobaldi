@@ -1,0 +1,11 @@
+{
+  "elenco": [
+    { "nome": "Laura Trapani", "ruolo": "Flauto traverso & Musica d'insieme", "cv": "" },
+    { "nome": "Luca Faraci", "ruolo": "Violino", "cv": "" },
+    { "nome": "Luca Longhini", "ruolo": "Chitarra Elettrica", "cv": "" },
+    { "nome": "Paola Amoroso", "ruolo": "Canto Lirico", "cv": "" },
+    { "nome": "Gloria Tarsitani", "ruolo": "Canto", "cv": "" },
+    { "nome": "Emilio Angelone", "ruolo": "Batteria", "cv": "" },
+    { "nome": "Davide La Rosa", "ruolo": "Chitarra Classica", "cv": "" }
+  ]
+}

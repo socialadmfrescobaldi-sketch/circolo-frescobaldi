@@ -1,0 +1,18 @@
+{
+  "testo": "Come era tradizione dei circoli musicali italiani ed europei, anche il Circolo Frescobaldi stabilì, fra le prime iniziative caratterizzanti e originali, di istituire un proprio premio: nacque il \"Premio Frescobaldi\", onorificenza da attribuirsi a personalità di riconosciuto prestigio del mondo della musica colta italiana, avente come effige un musico forgiato nel bronzo dallo scultore ferrarese Maurizio Bonora.\n\nL'albo d'oro della manifestazione, iniziata nel 1973 con l'attribuzione del riconoscimento al soprano Luisa Maragliano e al tenore Beniamino Prior, annovera nomi di spicco come quelli di Magda Olivero, Alfredo Kraus, Renato Bruson, Wilma Vernocchi, Virginia Zeani, Renata Tebaldi, Ferruccio Tagliavini, Raina Kabaivanska, Cecilia Gasdia, Leo Nucci, Lucia Valentini Terrani, Sonia Ganassi. Si tratta di cantanti lirici che hanno fatto la storia (e alcuni di loro, oggi in piena attività, continueranno a fare la storia) dell'interpretazione del melodramma.\n\nNon sono mancati i musicisti insigniti (pochi), tra i quali il direttore d'orchestra Edoardo Muller e il compositore Luciano Chailly. Quest'ultimo, ferrarese di origine, costituì il gruppo di soci del Circolo Frescobaldi, fotografati nel Teatro San Carlo di Napoli durante una delle numerose trasferte musicali organizzate dal sodalizio (1985), divenuta punta di diamante della pattuglia dei \"ferraresi\" ai quali è stato assegnato il Premio Frescobaldi.\n\nGli fanno compagnia nell'albo d'oro della manifestazione il tenore Daniele Barioni, il tenore Giorgio Merighi e il soprano Anna Caterina Antonacci, tutti originari di Ferrara e provincia.\nPer i primi 17 anni di attività, il Premio Frescobaldi venne attribuito annualmente, anche a più d'un artista contemporaneamente, tanto da annoverare nel proprio palmares ben 33 nomi illustri. Poi, sotto la presidenza Tromboni, il sodalizio scelse di insignire gli artisti meritevoli con molta maggior parsimonia e molta più circospezione rispetto al passato, tanto che nei 15 anni che separano il 1989 dall'oggi, gli insigniti del Premio Frescobaldi risultano essere soltanto tre e precisamente Lucia Valentini Terrani (1991), Sonia Ganassi (1997) e Anna Caterina Antonacci (2002).",
+  "alboOro": [
+    { "nome": "Magda Olivero" },
+    { "nome": "Alfredo Kraus" },
+    { "nome": "Renato Bruson" },
+    { "nome": "Virginia Zeani" },
+    { "nome": "Renata Tebaldi" },
+    { "nome": "Ferruccio Tagliavini" },
+    { "nome": "Raina Kabaivanska" },
+    { "nome": "Cecilia Gasdia" },
+    { "nome": "Leo Nucci" },
+    { "nome": "Sonia Ganassi" },
+    { "nome": "Anna Caterina Antonacci" },
+    { "nome": "Edoardo Muller" },
+    { "nome": "Luciano Chailly" }
+  ]
+}

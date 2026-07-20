@@ -1,0 +1,124 @@
+fragment CorsiParts on Corsi {
+  __typename
+  titolo
+  intro
+  elenco {
+    __typename
+    nome
+  }
+}
+
+fragment ContattiParts on Contatti {
+  __typename
+  indirizzo
+  telefono
+  email
+  piva
+  facebook
+  instagram
+  tiktok
+  whatsapp
+}
+
+fragment DocentiParts on Docenti {
+  __typename
+  elenco {
+    __typename
+    nome
+    ruolo
+    cv
+  }
+}
+
+fragment PresidenzaParts on Presidenza {
+  __typename
+  nome
+  ruolo
+  bio
+}
+
+fragment MissionParts on Mission {
+  __typename
+  citazione
+  testo
+}
+
+fragment SociParts on Soci {
+  __typename
+  testo
+  tesseraTitolo
+  tesseraPrezzo
+  tesseraTesto
+}
+
+fragment DocumentiParts on Documenti {
+  __typename
+  statuto
+  regolamento
+  modulo
+}
+
+fragment ChiSiamoParts on ChiSiamo {
+  __typename
+  titolo
+  stats {
+    __typename
+    numero
+    etichetta
+  }
+  testo
+}
+
+fragment EventiParts on Eventi {
+  __typename
+  elenco {
+    __typename
+    titolo
+    testo
+  }
+}
+
+fragment PremioParts on Premio {
+  __typename
+  testo
+  alboOro {
+    __typename
+    nome
+  }
+}
+
+fragment TestiVariParts on TestiVari {
+  __typename
+  candidatureTitolo
+  candidatureTesto
+  trasparenzaTesto
+  footerDescrizione
+}
+
+fragment GalleriaParts on Galleria {
+  __typename
+  immagini {
+    __typename
+    url
+    alt
+  }
+}
+
+fragment HeaderParts on Header {
+  __typename
+  logoMain
+  logoSub
+  heroEyebrow
+  heroTitolo
+  heroSottotitolo
+  heroDescrizione
+}
+
+fragment IniziativeParts on Iniziative {
+  __typename
+  elenco {
+    __typename
+    testo
+    foto
+  }
+}

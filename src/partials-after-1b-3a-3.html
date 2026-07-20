@@ -1,0 +1,83 @@
+  </div>
+</section>
+
+<!-- ISCRIZIONE E REGOLAMENTO + DIVENTA SOCIO -->
+<section id="iscrizione">
+  <div class="section-inner">
+
+    <!-- intestazioni colonne -->
+    <div class="iscrizione-soci-header">
+      <div class="is-col">
+        <p class="section-eyebrow">MODULISTICA</p>
+        <h2 class="section-title">Iscrizione e Regolamento</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="is-divider-v"></div>
+      <div class="is-col">
+        <p class="section-eyebrow">UNISCITI A NOI</p>
+        <h2 class="section-title">Diventa Socio</h2>
+        <div class="section-rule"></div>
+      </div>
+    </div>
+
+    <!-- righe contenuto -->
+    <div class="iscrizione-soci-body">
+
+      <!-- COLONNA SINISTRA -->
+      <div class="is-col">
+        <div class="iscrizione-text">
+          <p class="iscrizione-p1">Per iscriversi al Circolo è necessario compilare il modulo di iscrizione e versare la quota associativa. Il regolamento interno disciplina le attività, i diritti e i doveri dei soci.</p>
+          <p class="iscrizione-p2">Puoi scaricare il regolamento direttamente da questa pagina, oppure ritirarlo presso la sede durante gli orari di apertura.</p>
+        </div>
+
+        <!-- PDF regolamento caricato dall'admin (visibile a tutti) -->
+        <div id="pdf-file-list" class="pdf-file-list"><div class="pdf-file-item">
+        <span class="pdf-file-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+        </span>
+        <span class="pdf-file-name" title="Regolamento ed Iscrizioni.pdf">Regolamento ed Iscrizioni.pdf</span>
+        <span class="pdf-file-size">0.60 MB</span>
+        <a href="__PDF_REGOLAMENTO__" download="Regolamento ed Iscrizioni.pdf" class="pdf-download-btn" title="Scarica">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+        <button class="pdf-file-remove" onclick="removePdfFile(0)" title="Rimuovi">×</button>
+      </div></div>
+        <div id="regolamento-public" style="display:flex; margin-top:20px;">
+          <a id="regolamento-public-link" href="__PDF_REGOLAMENTO__" target="_blank" class="btn-outline" style="display:inline-flex;align-items:center;gap:8px;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M12 12v6"></path><path d="M9 15l3-3 3 3"></path></svg>
+            <span id="regolamento-public-label">Scarica il Regolamento</span>
+          </a>
+        </div>
+        <!-- Placeholder visibile a tutti quando nessun PDF è ancora caricato -->
+        <div id="regolamento-placeholder" style="display: none; margin-top: 16px;">
+          <p style="font-size:0.82rem; color:var(--muted); font-style:italic;">Il documento sarà disponibile a breve.</p>
+        </div>
+
+        <!-- Drop zone regolamento — solo admin -->
+        <div id="pdf-upload-panel" style="display: none; margin-top: 28px;">
+          <p class="section-eyebrow" style="margin-bottom:10px;">Carica regolamento <span style="font-size:0.65rem;color:var(--gold);margin-left:6px;">· Solo Admin</span></p>
+          <div class="pdf-drop-zone" id="pdf-drop-zone">
+            <input type="file" accept="application/pdf" multiple="" id="pdf-input" onchange="handlePdfFiles(this.files)">
+            <div class="pdf-drop-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <path d="M12 12v6"></path><path d="M9 15l3-3 3 3"></path>
+              </svg>
+            </div>
+            <div class="pdf-drop-title">Trascina qui il PDF</div>
+            <div class="pdf-drop-sub">oppure clicca · solo .pdf</div>
+          </div>
+          <p style="font-size:0.72rem; color:var(--muted); margin-top:10px; font-style:italic;">File disponibili fino alla chiusura della pagina. Per link permanente usa il tab Altro nel pannello admin.</p>
+        </div>
+      </div>
+
+      <!-- DIVISORE VERTICALE -->
+      <div class="is-divider-v"></div>
+
+      <!-- COLONNA DESTRA -->
+      <div class="is-col">
+        <div class="iscrizione-text">

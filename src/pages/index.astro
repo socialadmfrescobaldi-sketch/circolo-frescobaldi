@@ -1,0 +1,230 @@
+---
+import beforeHtml0 from '../partials-header-0.html?raw';
+import beforeHtml2h from '../partials-header-2.html?raw';
+import beforeHtml5h from '../partials-header-5.html?raw';
+import beforeHtml6h from '../partials-header-6.html?raw';
+import beforeHtml2 from '../partials-before-2.html?raw';
+import headerData from '../../content/header.json';
+import afterHtml1a from '../partials-after-1a.html?raw';
+import afterHtml1b1a from '../partials-after-1b-1a.html?raw';
+import afterHtml1b1b1a from '../partials-after-1b-1b-1a.html?raw';
+import afterHtml1b1b1b from '../partials-after-1b-1b-1b.html?raw';
+import afterHtml1b1b2 from '../partials-after-1b-1b-2.html?raw';
+import iniziativeData from '../../content/iniziative.json';
+import afterHtml1b1c from '../partials-after-1b-1c.html?raw';
+import afterHtml1b2 from '../partials-after-1b-2.html?raw';
+import afterHtml1b3a1 from '../partials-after-1b-3a-1.html?raw';
+import afterHtml1b3a2 from '../partials-after-1b-3a-2.html?raw';
+import afterHtml1b3a3Raw from '../partials-after-1b-3a-3.html?raw';
+import afterHtml1b3bRaw from '../partials-after-1b-3b.html?raw';
+import afterHtml2a from '../partials-after-2a.html?raw';
+import afterHtml2b from '../partials-after-2b.html?raw';
+import afterHtml2c from '../partials-after-2c.html?raw';
+import corsiData from '../../content/corsi.json';
+import contattiData from '../../content/contatti.json';
+import docentiData from '../../content/docenti.json';
+import presidenzaData from '../../content/presidenza.json';
+import missionData from '../../content/mission.json';
+import sociData from '../../content/soci.json';
+import documentiData from '../../content/documenti.json';
+import chiSiamoData from '../../content/chi-siamo.json';
+import eventiData from '../../content/eventi.json';
+import premioData from '../../content/premio.json';
+import testiVariData from '../../content/testi-vari.json';
+import galleriaData from '../../content/galleria.json';
+import { CORSO_ICONS, DEFAULT_CORSO_ICON } from '../data/corsoIcons';
+
+function iniziali(nome: string) {
+  return nome.split(' ').map(p => p[0]).join('').toUpperCase().slice(0, 2);
+}
+
+const presidenzaBioHtml = presidenzaData.bio
+  .split('\n\n')
+  .map((p: string) => p.replace(/\n/g, '<br>'))
+  .join('<br><br>');
+
+const introHtml = corsiData.intro
+  .split('\n\n')
+  .map((p: string) => `<p class="didattica-intro">${p.replace(/\n/g, '<br>')}</p>`)
+  .join('\n');
+
+const indirizzoHtml = contattiData.indirizzo.replace(/\n/g, '<br>');
+
+const afterHtml1b3a3 = afterHtml1b3a3Raw.replaceAll('__PDF_REGOLAMENTO__', documentiData.regolamento);
+const afterHtml1b3b = afterHtml1b3bRaw
+  .replaceAll('__PDF_MODULO__', documentiData.modulo)
+  .replaceAll('__PDF_STATUTO__', documentiData.statuto);
+---
+<Fragment set:html={beforeHtml0} />
+            <span class="logo-main">{headerData.logoMain}</span>
+            <span class="logo-sub">{headerData.logoSub}</span>
+<Fragment set:html={beforeHtml2h} />
+      <p class="hero-eyebrow">{headerData.heroEyebrow}</p>
+    <h1>{headerData.heroTitolo}</h1>
+    <p class="hero-subtitle">{headerData.heroSottotitolo}</p>
+<Fragment set:html={beforeHtml5h} />
+    <p class="hero-desc">{headerData.heroDescrizione}</p>
+<Fragment set:html={beforeHtml6h} />
+<div class="chisiamo-grid">
+  <div>
+    <p class="section-eyebrow">LA NOSTRA STORIA</p>
+    <h2 class="section-title">{chiSiamoData.titolo}</h2>
+    <div class="section-rule"></div>
+    <div class="chisiamo-stats">
+      {chiSiamoData.stats.map((s: { numero: string; etichetta: string }) => (
+        <div class="chisiamo-stat">
+          <div class="num">{s.numero}</div>
+          <div class="label">{s.etichetta}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="chisiamo-text">
+    <p set:html={chiSiamoData.testo.split('\n\n').map((p: string) => p.replace(/\n/g, '<br>')).join('<br><br>')} />
+  </div>
+</div>
+<Fragment set:html={beforeHtml2} />
+
+<h2 class="section-title" style="color:var(--cream)">{corsiData.titolo}</h2>
+<Fragment set:html={introHtml} />
+<div class="corsi-grid">
+  {corsiData.elenco.map((corso: { nome: string }) => (
+    <div class="corso-item">
+      <span class="corso-icon" set:html={CORSO_ICONS[corso.nome] || DEFAULT_CORSO_ICON} />
+      <span class="corso-name">{corso.nome}</span>
+    </div>
+  ))}
+</div>
+
+<Fragment set:html={afterHtml1a} />
+
+<div class="insegnanti-grid">
+  {docentiData.elenco.map((doc: { nome: string; ruolo: string; cv: string }) => (
+    <div class="insegnante-card">
+      <div class="ins-avatar"><div class="ins-initial">{iniziali(doc.nome)}</div></div>
+      <div class="ins-name">{doc.nome}</div>
+      <div class="ins-role">{doc.ruolo}</div>
+      <a href={doc.cv || ''} class="ins-cv" target="_blank" style={doc.cv ? '' : 'display:none'}>Curriculum →</a>
+    </div>
+  ))}
+</div>
+
+<Fragment set:html={afterHtml1b1a} />
+
+<div class="eventi-grid">
+  {eventiData.elenco.map((ev: { titolo: string; testo: string }) => (
+    <div class="evento-card">
+      <div class="evento-title">{ev.titolo}</div>
+      <div class="evento-info">{ev.testo}</div>
+    </div>
+  ))}
+</div>
+
+<Fragment set:html={afterHtml1b1b1a} />
+
+<!-- INIZIATIVE -->
+<section id="iniziative">
+  <div class="section-inner">
+    <p class="section-eyebrow">LE NOSTRE ATTIVITÀ</p>
+    <h2 class="section-title">Iniziative</h2>
+    <div class="section-rule"></div>
+    <div class="iniziative-grid">
+      {iniziativeData.elenco.map((ini: { testo: string; foto: string }) => (
+        <div class="iniziativa-card">
+          {ini.foto && <img class="iniziativa-foto" src={ini.foto} alt="" />}
+          <div class="iniziativa-testo">{ini.testo}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<Fragment set:html={afterHtml1b1b1b} />
+<div class="gallery-grid" id="gallery-grid">
+  {galleriaData.immagini.map((img: { url: string; alt: string }) => (
+    <div class="gallery-slot has-image">
+      <img src={img.url} alt={img.alt} />
+    </div>
+  ))}
+</div>
+<Fragment set:html={afterHtml1b1b2} />
+
+<p class="premio-p1" set:html={premioData.testo.split('\n\n').map((p: string) => p.replace(/\n/g, '<br>')).join('<br><br>')} />
+<div class="albo-oro">
+  {premioData.alboOro.map((a: { nome: string }) => (
+    <span class="albo-tag">{a.nome}</span>
+  ))}
+</div>
+
+<Fragment set:html={afterHtml1b1c} />
+
+<div class="presidenza-aside">
+  <div class="pres-initial">{iniziali(presidenzaData.nome)}</div>
+  <div class="pres-name">{presidenzaData.nome}</div>
+  <div class="pres-role">{presidenzaData.ruolo}</div>
+</div>
+<div class="presidenza-text">
+  <p class="presidenza-p1" set:html={presidenzaBioHtml} />
+</div>
+
+<Fragment set:html={afterHtml1b2} />
+
+<blockquote class="mission-quote">"{missionData.citazione}"</blockquote>
+<p class="mission-text">{missionData.testo}</p>
+
+<Fragment set:html={afterHtml1b3a1} />
+<h2 class="section-title" style="text-align:center">{testiVariData.candidatureTitolo}</h2>
+<Fragment set:html={afterHtml1b3a2} />
+<p class="candidature-text">{testiVariData.candidatureTesto}</p>
+<Fragment set:html={afterHtml1b3a3} />
+
+<p class="iscrizione-p3">{sociData.testo}</p>
+
+<div class="soci-card" style="margin-bottom:24px;">
+  <div class="soci-card-title">{sociData.tesseraTitolo}</div>
+  <div class="soci-card-price">{sociData.tesseraPrezzo}</div>
+  <p class="soci-card-text">{sociData.tesseraTesto}</p>
+</div>
+
+<Fragment set:html={afterHtml1b3b} />
+
+<div class="contact-item">
+  <div class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s7-7.5 7-12a7 7 0 0 0-14 0c0 4.5 7 12 7 12Z"></path><circle cx="12" cy="9" r="2.3"></circle></svg></div>
+  <div>
+    <div class="contact-label">Indirizzo</div>
+    <div class="contact-value" set:html={indirizzoHtml} />
+  </div>
+</div>
+<div class="contact-item">
+  <div class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2c-8 0-15-7-15-15a2 2 0 0 1 2-2Z"></path></svg></div>
+  <div>
+    <div class="contact-label">Telefono</div>
+    <div class="contact-value"><a href={`tel:${contattiData.telefono.replace(/\s/g, '')}`}>{contattiData.telefono}</a></div>
+  </div>
+</div>
+<div class="contact-item">
+  <div class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1.5"></rect><path d="M4 6.5l8 6 8-6"></path></svg></div>
+  <div>
+    <div class="contact-label">Email</div>
+    <div class="contact-value"><a href={`mailto:${contattiData.email}`}>{contattiData.email}</a></div>
+  </div>
+</div>
+<div class="contact-item">
+  <div class="contact-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 9 12 4l8 5"></path><line x1="5" y1="9" x2="19" y2="9"></line><line x1="6" y1="9" x2="6" y2="19"></line><line x1="10" y1="9" x2="10" y2="19"></line><line x1="14" y1="9" x2="14" y2="19"></line><line x1="18" y1="9" x2="18" y2="19"></line><line x1="4" y1="19" x2="20" y2="19"></line></svg></div>
+  <div>
+    <div class="contact-label">P.IVA</div>
+    <div class="contact-value">{contattiData.piva}</div>
+  </div>
+</div>
+<div class="social-row">
+  <a href={contattiData.facebook} target="_blank" class="social-btn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.41c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.58v1.9h2.78l-.44 2.91h-2.34V22c4.78-.76 8.45-4.92 8.45-9.94Z"></path></svg> Facebook</a>
+  <a href={contattiData.instagram} target="_blank" class="social-btn"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor" stroke="none"></circle></svg> Instagram</a>
+  <a href={contattiData.tiktok} target="_blank" class="social-btn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M16.6 2h-3.1v13.7a3.1 3.1 0 1 1-2.1-2.93V9.6a6.1 6.1 0 1 0 5.2 6.03V9.1a7.7 7.7 0 0 0 4.5 1.45V7.5a4.6 4.6 0 0 1-4.5-4.5Z"></path></svg> TikTok</a>
+  <a href={contattiData.whatsapp} target="_blank" class="social-btn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.3-5-4.6-.1-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.3-.3.6-.4.8-.4h.5c.2 0 .4 0 .6.5.2.5.7 1.7.8 1.8.1.2.1.3 0 .5-.4.8-.9 1-1.1 1.3-.1.1-.2.3-.1.5.6 1.2 1.3 1.9 2.3 2.6 1 .7 1.6.9 1.9 1 .2.1.4.1.5-.1.2-.2.7-.8.9-1 .2-.3.4-.2.6-.1.2.1 1.4.7 1.6.8.2.1.4.2.4.3.1.2.1.6-.1 1.2Z"></path></svg> WhatsApp</a>
+</div>
+
+<Fragment set:html={afterHtml2a} />
+<p class="trasparenza-text">{testiVariData.trasparenzaTesto}</p>
+<Fragment set:html={afterHtml2b} />
+<p class="footer-desc">{testiVariData.footerDescrizione}</p>
+<Fragment set:html={afterHtml2c} />
