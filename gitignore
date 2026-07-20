@@ -1,0 +1,17 @@
+# Dipendenze
+node_modules/
+
+# Build di Astro
+dist/
+.astro/
+
+# File di ambiente
+.env
+.env.production
+
+# File di sistema
+.DS_Store
+Thumbs.db
+
+# Log
+npm-debug.log*
