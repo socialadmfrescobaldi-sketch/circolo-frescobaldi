@@ -1,13 +1,13 @@
 {
   "immagini": [
-    { "url": "/images/image3.jpg", "alt": "Immagine galleria 1" },
-    { "url": "/images/image4.jpg", "alt": "Immagine galleria 2" },
-    { "url": "/images/image5.jpg", "alt": "Immagine galleria 3" },
-    { "url": "/images/image6.jpg", "alt": "Immagine galleria 4" },
-    { "url": "/images/image7.jpg", "alt": "Immagine galleria 5" },
-    { "url": "/images/image8.jpg", "alt": "Immagine galleria 6" },
-    { "url": "/images/image9.jpg", "alt": "Immagine galleria 7" },
-    { "url": "/images/image10.jpg", "alt": "Immagine galleria 8" },
-    { "url": "/images/image11.jpg", "alt": "Immagine galleria 9" }
+    { "url": "/circolo-frescobaldi/images/image3.jpg", "alt": "Immagine galleria 1" },
+    { "url": "/circolo-frescobaldi/images/image4.jpg", "alt": "Immagine galleria 2" },
+    { "url": "/circolo-frescobaldi/images/image5.jpg", "alt": "Immagine galleria 3" },
+    { "url": "/circolo-frescobaldi/images/image6.jpg", "alt": "Immagine galleria 4" },
+    { "url": "/circolo-frescobaldi/images/image7.jpg", "alt": "Immagine galleria 5" },
+    { "url": "/circolo-frescobaldi/images/image8.jpg", "alt": "Immagine galleria 6" },
+    { "url": "/circolo-frescobaldi/images/image9.jpg", "alt": "Immagine galleria 7" },
+    { "url": "/circolo-frescobaldi/images/image10.jpg", "alt": "Immagine galleria 8" },
+    { "url": "/circolo-frescobaldi/images/image11.jpg", "alt": "Immagine galleria 9" }
   ]
 }
